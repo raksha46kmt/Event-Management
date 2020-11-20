@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<style>
+h1,p{
+  text-align:center;
+  color: #800000;
+}
+table,th,td {
+  border : 1px solid black;
+  border-collapse: collapse;
+   margin-left: auto;
+  margin-right: auto;
+}
+th,td {
+  padding: 9px;
+}
+</style>
+<body>
+<h1>CELEBRATE YOUR SPECIAL DAY</h1>
+<p>Click on the events to know its Price</p>
+<p id='showbook'></p>
+<table id="demo"></table>
+
+
+<script>
+var x,xmlhttp,xmlDoc
+xmlhttp = new XMLHttpRequest();
+xmlhttp.open("GET", "index.xml", false);
+xmlhttp.send();
+xmlDoc = xmlhttp.responseXML;
+x = xmlDoc.getElementsByTagName("book");
+table="<tr><th>Different Types of Events</th><th>SPECIAL price</th></tr>";
+for (i = 0; i <x.length; i++) {
+  table += "<tr onclick='displaybook(" + i + ")'><td>";
+  table += x[i].getElementsByTagName("Events")[0].childNodes[0].nodeValue;
+  table += "</td><td>";
+  table +=  x[i].getElementsByTagName("Price")[0].childNodes[0].nodeValue;
+  table += "</td></tr>";
+}
+document.getElementById("demo").innerHTML = table;
+
+function displaybook(i) {
+  document.getElementById("showbook").innerHTML =
+  "NAME: " +
+  x[i].getElementsByTagName("Events")[0].childNodes[0].nodeValue +
+  "<br>Events: " +
+  x[i].getElementsByTagName("Price")[0].childNodes[0].nodeValue +
+  "<br>Price: " +
+  x[i].getElementsByTagName("book")[0].childNodes[0].nodeValue +
+  "<br>book: " +
+  x[i].getElementsByTagName("Amount")[0].childNodes[0].nodeValue;
+}
+
+</script>
+
+</body>
+</html>
