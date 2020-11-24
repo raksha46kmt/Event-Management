@@ -19,5 +19,5 @@ function loadLang(xml)
 	document.getElementById("ev2").innerHTML = ev2[0].childNodes[0].nodeValue;
 	
 	var ev3 = xmlDoc.getElementsByTagName("ev3");
-	document.getElementById("ev3").innerHTML = ev3[0].childnodes[0].nodeValue;
+	document.getElementById("ev3").innerHTML = ev3[0].childNodes[0].nodeValue;
 }
