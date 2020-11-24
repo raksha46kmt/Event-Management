@@ -18,6 +18,6 @@ function loadLang(xml)
 	var ev2 = xmlDoc.getElementsByTagName("ev2");
 	document.getElementById("ev2").innerHTML = ev2[0].childNodes[0].nodeValue;
 	
-	var ev3 = xmlDoc.getElementsByTagName("ev2");
-	document.getElementById("ev2").innerHTML = ev2[0].childnodes[0].nodeValue;
+	var ev3 = xmlDoc.getElementsByTagName("ev3");
+	document.getElementById("ev3").innerHTML = ev3[0].childnodes[0].nodeValue;
 }
