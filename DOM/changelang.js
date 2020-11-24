@@ -13,7 +13,7 @@ function loadLang(xml)
 {
 	xmlDoc=xml.responseXML;
 	var ev1=xmlDoc.getElementsByTagName("ev1");
-	documnet.getElementById("ev1").innerHTML=ev1[0].childNodes[0].nodeValue;
+	document.getElementById("ev1").innerHTML=ev1[0].childNodes[0].nodeValue;
 	
 	var ev2 = xmlDoc.getElementsByTagName("ev2");
 	document.getElementById("ev2").innerHTML = ev2[0].childNodes[0].nodeValue;
