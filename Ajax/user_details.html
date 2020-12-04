@@ -1,0 +1,21 @@
+<html>
+<title>User Details</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="event.css">
+<script type="text/javascript" src="user_details.js"></script>
+
+</head>
+<body>
+
+	<h1>User Details</h1>
+	<hr>
+	<hr>
+		<input type="text"placeholder="Enter User name" name="username" id="username"  onkeyup="username_validation();" /><span id="name_err"></span>
+		
+		<div class="user_dts">
+		<button type="button" onclick="getUserDetails()">Submit</button>
+		</div><br><br><br><br>
+		<div id="user_details"></div>
+</body>
+</html>
