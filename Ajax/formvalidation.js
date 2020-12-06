@@ -95,3 +95,21 @@ document.getElementById('email_err').innerHTML = 'Valid email format';
 document.getElementById('email_err').style.color = "#00AF33";
 }
 }
+function eventname_validation(){
+'use strict';
+var event_name = document.getElementById("eventname");
+var event_value = document.getElementById("eventname").value;
+var event_length = event_value.length;
+var letters = /^[0-9a-zA-Z]+$/;
+if(event_length < 4 || !event_value.match(letters))
+{
+document.getElementById('event_err').innerHTML = 'Event name must be 4 chracters long and alphanuric chracters only.';
+event_name.focus();
+document.getElementById('event_err').style.color = "#FF0000";
+} 
+else
+{
+document.getElementById('event_err').innerHTML = 'Valid event';
+document.getElementById('event_err').style.color = "#00AF33";
+}
+}
