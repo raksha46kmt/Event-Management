@@ -1,0 +1,22 @@
+<html>
+<title>User Details</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="event.css">
+<script type="text/javascript" src="event_details.js"></script>
+<script type="text/javascript" src="formvalidation.js"></script>
+
+</head>
+<body>
+
+	<h1>User Details</h1>
+	<hr>
+	<hr>
+		<input type="text"placeholder="Enter the Event" name="eventname" id="eventname"  onkeyup="eventname_validation();" /><span id="event_err"></span>
+		
+		<div class="event_dts">
+		<button type="button" onclick="getEventDetails()">Submit</button>
+		</div><br><br><br><br>
+		<div id="event_details"></div>
+</body>
+</html>
